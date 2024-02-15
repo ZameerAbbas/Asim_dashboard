@@ -1,0 +1,59 @@
+.Dashboardconatainer {
+  padding: 50px;
+}
+
+.logperson {
+  float: right;
+}
+
+.inputSectioncreate {
+}
+.inputSectioncreate,
+input {
+  padding: 10px;
+  margin: 15px 45px 0 0;
+}
+
+.inputSectioncreate button {
+  padding: 10px;
+}
+
+.lablesFLex {
+  display: flex;
+}
+.imageinputcreate {
+  padding: 20px 0;
+}
+.imageinputcreate input {
+  padding: 10px;
+  margin: 15px 45px 0 0;
+}
+
+.stockitem {
+  margin: 50px 0;
+  border: 5px solid #383b46;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #444857;
+}
+
+.parentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.parentGrid img {
+  width: 200px;
+}
+.editBtn {
+  float: right;
+}
+
+.parentGrid div {
+  width: 300px;
+}

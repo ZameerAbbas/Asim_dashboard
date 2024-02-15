@@ -1,25 +1,71 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard.jsx";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import { UserAuthContextProvider } from "./context/UserAuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Minerals from "./pages/Minerals";
+import SpecialOffer from "./pages/SpecialOffer";
+import Trendingproduct from "./pages/Trendingproduct";
+import FavoriteCategories from "./pages/FavoriteCategories";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/* <Header /> */}
+      <Sidebar>
+        <UserAuthContextProvider>
+          <Routes>
+            <Route
+              path="/Dashboard"
+              element={
+                <ProtectedRoute>
+                  <Dashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/Minerals"
+              element={
+                <ProtectedRoute>
+                  <Minerals />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/SpecialOffer"
+              element={
+                <ProtectedRoute>
+                  <SpecialOffer />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/Trendingproduct"
+              element={
+                <ProtectedRoute>
+                  <Trendingproduct />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/FavoriteCategories"
+              element={
+                <ProtectedRoute>
+                  <FavoriteCategories />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="/" element={<Login />} />
+            <Route path="/Signup" element={<Signup />} />
+          </Routes>
+        </UserAuthContextProvider>
+      </Sidebar>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

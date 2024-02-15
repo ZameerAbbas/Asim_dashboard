@@ -1,0 +1,15 @@
+.Logout_button {
+    background-color: #464b5c;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: 3px solid  #4c5265;
+    margin: 10px 0;
+    color: #fff;
+
+}
+
+.Logout_button:hover {
+    background-color: #3d404d;
+    border: 1px solid #3d404d;
+    border-radius: 25px;
+  }

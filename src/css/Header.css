@@ -1,0 +1,41 @@
+.Header_Container{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #F7F7F7;
+    padding: 0 10px;
+    margin: 15px 0;
+}
+.Header_logo_Container{
+}
+.Logo_Header_image{
+    width: 100%;
+
+}
+
+.Header_Search_Container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.Header_search_box{
+    border: 2px solid #402FD0;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px 35px;
+    padding-right: 45px;
+}
+.input_search_header{
+    border: none;
+    outline: none;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.Job_Header_image{
+    width: 25%;
+}
